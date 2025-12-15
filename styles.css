@@ -342,3 +342,46 @@ h1{
   .grid{ grid-template-columns:1fr; }
   h1{ font-size:46px; }
 }
+
+/* Mobile + small tablets */
+@media (max-width: 900px){
+  .hero{ padding:72px 0 40px; }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:42px;
+    line-height:1.15;
+  }
+
+  .lead{
+    font-size:16px;
+  }
+
+  .btn-row{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .container{
+    width:min(1120px, 92%);
+  }
+}
+
+/* Phones */
+@media (max-width: 520px){
+  h1{ font-size:34px; }
+  .section{ padding:44px 0; }
+
+  .card{
+    padding:18px;
+    border-radius:16px;
+  }
+}
