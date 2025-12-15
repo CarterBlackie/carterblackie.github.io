@@ -343,45 +343,41 @@ h1{
   h1{ font-size:46px; }
 }
 
-/* Mobile + small tablets */
-@media (max-width: 900px){
-  .hero{ padding:72px 0 40px; }
-
-  .hero-grid{
-    grid-template-columns:1fr;
+/* Fix nav overflow on small screens */
+@media (max-width: 700px){
+  .nav-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  h1{
-    font-size:42px;
-    line-height:1.15;
+  .nav-links{
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
-  .lead{
-    font-size:16px;
-  }
-
-  .btn-row{
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
-  .btn{
-    width:100%;
-    justify-content:center;
-  }
-
-  .container{
-    width:min(1120px, 92%);
+  .nav-links a{
+    padding: 8px 10px;
   }
 }
 
-/* Phones */
+/* Make hero spacing + text fit phones */
 @media (max-width: 520px){
-  h1{ font-size:34px; }
-  .section{ padding:44px 0; }
+  body{ font-size: 16px; }
 
-  .card{
-    padding:18px;
-    border-radius:16px;
+  .hero{ padding: 56px 0 28px; }
+
+  h1{
+    font-size: 32px;
+    line-height: 1.12;
+    word-break: break-word;
+  }
+
+  .subtitle{ font-size: 16px; }
+
+  .btn-row{ margin-top: 14px; }
+
+  .btn{
+    width: 100%;
   }
 }
