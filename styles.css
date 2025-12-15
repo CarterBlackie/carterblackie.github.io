@@ -336,6 +336,42 @@ h1{
   border:0;
 }
 
+.social-section {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+}
+
+.social-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.social-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.social-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.social-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pinkStrong);
+  box-shadow: 0 10px 30px rgba(255, 170, 210, 0.12);
+}
+
+
 /* Responsive */
 @media(max-width:900px){
   .hero-grid{ grid-template-columns:1fr; }
