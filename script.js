@@ -51,43 +51,6 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(seedPetals, 200);
 });
 
-/* Scroll reveal */
-const revealTargets = [
-  ...document.querySelectorAll(".section"),
-  ...document.querySelectorAll(".hero"),
-  ...document.querySelectorAll(".card")
-];
-
-revealTargets.forEach(el => el.classList.add("reveal"));
-
-const io = new IntersectionObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.isIntersecting) entry.target.classList.add("in");
-  }
-}, { threshold: 0.12 });
-
-revealTargets.forEach(el => io.observe(el));
-
-/* Active nav highlight */
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-function setActive() {
-  let currentId = "";
-  sections.forEach(sec => {
-    const r = sec.getBoundingClientRect();
-    if (r.top <= 120 && r.bottom >= 120) currentId = sec.id;
-  });
-
-  navLinks.forEach(a => {
-    const isActive = a.getAttribute("href") === `#${currentId}`;
-    a.classList.toggle("active", isActive);
-  });
-}
-
-window.addEventListener("scroll", setActive);
-setActive();
-
 /* Back to top */
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {
