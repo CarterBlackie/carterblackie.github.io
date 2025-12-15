@@ -1,11 +1,7 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* -----------------------------
-   Sakura petals generator
--------------------------------- */
+/* Sakura petals generator */
 const petalsRoot = document.getElementById("petals");
-
-// More petals = denser background
 const PETAL_COUNT = 28;
 
 function rand(min, max) {
@@ -55,9 +51,7 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(seedPetals, 200);
 });
 
-/* -----------------------------
-   Scroll reveal
--------------------------------- */
+/* Scroll reveal */
 const revealTargets = [
   ...document.querySelectorAll(".section"),
   ...document.querySelectorAll(".hero"),
@@ -74,9 +68,7 @@ const io = new IntersectionObserver((entries) => {
 
 revealTargets.forEach(el => io.observe(el));
 
-/* -----------------------------
-   Active nav highlight
--------------------------------- */
+/* Active nav highlight */
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -96,22 +88,15 @@ function setActive() {
 window.addEventListener("scroll", setActive);
 setActive();
 
-/* -----------------------------
-   Back to top button
--------------------------------- */
+/* Back to top */
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {
+  if (!toTop) return;
   toTop.classList.toggle("show", window.scrollY > 600);
 });
 
-toTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-/* -----------------------------
-   Motion toggle
--------------------------------- */
-const motionToggle = document.getElementById("motionToggle");
-motionToggle.addEventListener("click", () => {
-  document.body.classList.toggle("no-motion");
-});
+if (toTop) {
+  toTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
