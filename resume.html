@@ -9,6 +9,12 @@
 </head>
 
 <body>
+  <!-- Sakura animated background -->
+  <div class="bg-sakura" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="petals" id="petals"></div>
+  </div>
+
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">Carter Blackie</a>
@@ -18,17 +24,21 @@
         <a href="resume.html" class="active">Resume</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#contact">Contact</a>
+
+        <button id="motionToggle" class="motion-btn" type="button" aria-label="Toggle motion">
+          Motion
+        </button>
       </nav>
     </div>
   </header>
 
   <main class="resume-page">
-    <section class="section">
+    <section class="section resume-section">
       <div class="container">
-        <h1>Resume</h1>
-        <p class="muted">
-          View my resume directly below. A download option is available if needed.
-        </p>
+        <div class="resume-head">
+          <h1>Resume</h1>
+          <p class="muted">View my resume directly below.</p>
+        </div>
 
         <div class="resume-frame">
           <iframe
@@ -38,7 +48,7 @@
           </iframe>
         </div>
 
-        <div class="btn-row" style="margin-top:16px;">
+        <div class="btn-row resume-actions">
           <a class="btn outline" href="assets/Resume.pdf" target="_blank" rel="noreferrer">
             Open in new tab
           </a>
@@ -55,6 +65,8 @@
       © <span id="year"></span> Carter Blackie
     </div>
   </footer>
+
+  <button id="toTop" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>
