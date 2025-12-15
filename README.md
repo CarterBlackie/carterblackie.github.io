@@ -1,2 +1,2 @@
 # carterblackie-site
-Personal resume website for Carter Blackie showcasing experience, projects, skills, and contact information for recruiters.
+This repository contains the source code for CarterBlackie.com, a personal resume and portfolio website. The site highlights my professional experience, technical skills, and selected projects so recruiters and hiring managers can quickly review my work.
