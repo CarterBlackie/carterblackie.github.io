@@ -5,8 +5,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 -------------------------------- */
 const petalsRoot = document.getElementById("petals");
 
-// Adjust this number for more/less petals
-const PETAL_COUNT = 26;
+// More petals = denser background
+const PETAL_COUNT = 28;
 
 function rand(min, max) {
   return Math.random() * (max - min) + min;
@@ -16,14 +16,10 @@ function makePetal() {
   const p = document.createElement("span");
   p.className = "petal";
 
-  // Start position across the screen
   const x = rand(0, 100).toFixed(2) + "vw";
-  // Drift left/right while falling
   const drift = rand(-20, 20).toFixed(2) + "vw";
-  // Duration + delay
-  const d = rand(8, 16).toFixed(2) + "s";
-  const delay = rand(0, 8).toFixed(2) + "s";
-  // Rotation + scale
+  const d = rand(9, 17).toFixed(2) + "s";
+  const delay = rand(0, 10).toFixed(2) + "s";
   const r = rand(0, 360).toFixed(2) + "deg";
   const s = rand(0.75, 1.25).toFixed(2);
 
@@ -34,7 +30,6 @@ function makePetal() {
   p.style.setProperty("--r", r);
   p.style.setProperty("--s", s);
 
-  // Slight size variation
   const w = rand(12, 20);
   const h = rand(9, 16);
   p.style.width = w + "px";
@@ -54,7 +49,6 @@ function seedPetals() {
 
 seedPetals();
 
-// Re-seed on resize (keeps it looking good on different sizes)
 let resizeTimer = null;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
@@ -101,3 +95,23 @@ function setActive() {
 
 window.addEventListener("scroll", setActive);
 setActive();
+
+/* -----------------------------
+   Back to top button
+-------------------------------- */
+const toTop = document.getElementById("toTop");
+window.addEventListener("scroll", () => {
+  toTop.classList.toggle("show", window.scrollY > 600);
+});
+
+toTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+/* -----------------------------
+   Motion toggle
+-------------------------------- */
+const motionToggle = document.getElementById("motionToggle");
+motionToggle.addEventListener("click", () => {
+  document.body.classList.toggle("no-motion");
+});
