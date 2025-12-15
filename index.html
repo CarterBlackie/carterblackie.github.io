@@ -1,290 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>Carter Blackie | Software Developer</title>
-  <meta name="description" content="Carter Blackie — Software Developer. Experience, projects, and skills." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Sakura animated background -->
-  <div class="bg-sakura" aria-hidden="true">
-    <div class="bg-glow"></div>
-    <div class="petals" id="petals"></div>
+<div class="bg-sakura"><div class="bg-glow"></div><div class="petals" id="petals"></div></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Carter Blackie</a>
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#top">Carter Blackie</a>
+<main class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Carter Blackie</h1>
+      <p class="subtitle">Software Developer • Security-minded • C++ • Python</p>
+      <p class="lead">
+        Third-year Bachelor of Computer Science (Honours) student at Conestoga College.
+        I build secure, reliable software and enjoy turning ideas into working systems.
+      </p>
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="resume.html">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="btn-row">
+        <a class="btn" href="mailto:carterblackie55@gmail.com">Email</a>
+        <a class="btn outline" href="projects.html">View Projects</a>
+        <a class="btn outline" href="resume.html">View Resume</a>
+      </div>
     </div>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Carter Blackie</h1>
-          <p class="subtitle">Software Developer • Security-minded • C++ • Python</p>
+    <aside class="card">
+      <h3>Quick Info</h3>
+      <ul class="quick">
+        <li><b>Location:</b> Cambridge, Ontario</li>
+        <li><b>School:</b> Conestoga College</li>
+        <li><b>Focus:</b> Software + Security</li>
+        <li><b>Tools:</b> Git, Linux, Visual Studio</li>
+      </ul>
+    </aside>
+  </div>
+</main>
 
-          <p class="lead">
-            I’m a third-year Bachelor of Computer Science student at Conestoga College with a strong interest in
-            software engineering and a drive to turn ideas into working solutions. I like combining technical skills
-            with real-world experience—whether it’s writing clean code or helping customers solve tech issues.
-          </p>
+<footer class="footer">
+  © <span id="year"></span> Carter Blackie
+</footer>
 
-          <div class="btn-row">
-            <a class="btn" href="mailto:carterblackie55@gmail.com">Email</a>
-            <a class="btn outline" href="https://github.com/CarterBlackie" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn outline" href="https://www.linkedin.com/in/carterblackie/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn outline" href="resume.html">View Resume</a>
-          </div>
-        </div>
-
-        <aside class="card">
-          <h2 class="card-title">Quick Info</h2>
-          <ul class="quick">
-            <li><span class="muted">Location:</span> Cambridge, Ontario</li>
-            <li><span class="muted">School:</span> Conestoga College (BCompSci Honours)</li>
-            <li><span class="muted">Focus:</span> Software + Security / secure system design</li>
-            <li><span class="muted">Tools:</span> Git/GitHub, Visual Studio, Linux</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT (expanded) -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          I’m a third-year Bachelor of Computer Science (Honours) student at Conestoga College on the Security
-          specialization track. I’m interested in cybersecurity, software engineering, and building solutions that
-          are reliable and secure. I’ve worked across programming, networks, and operating systems, and I like
-          projects where I can design, build, and improve real systems.
-        </p>
-
-        <div class="highlights">
-          <div class="highlights-card">
-            <h3>Highlights</h3>
-            <ul>
-              <li>Build projects in C++, Python, and web fundamentals (HTML/CSS/JS).</li>
-              <li>Security-aware mindset: validation, safer design choices, and clean structure.</li>
-              <li>Comfortable with Linux and Windows workflows, Git, and debugging.</li>
-              <li>Strong communication from customer-facing technical support experience.</li>
-            </ul>
-          </div>
-
-          <div class="highlights-card">
-            <h3>What I’m looking for</h3>
-            <ul>
-              <li>Software Developer internship / co-op or junior role.</li>
-              <li>Work that involves building, improving, and shipping real features.</li>
-              <li>Teams that value quality, security, and clear communication.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section alt">
-      <div class="container">
-        <h2>Experience</h2>
-
-        <div class="stack">
-          <article class="card">
-            <div class="row">
-              <h3>Materials Service — Jefferson Elora Corporation</h3>
-              <p class="muted">Jun 2025 – Present • Elora, Ontario</p>
-            </div>
-            <ul>
-              <li>Support production workflows by managing material requests and delivering to workstations.</li>
-              <li>Maintain inventory with tracking, scanning, and data entry in PLEX.</li>
-              <li>Work with weld/stamping teams to keep operations moving.</li>
-              <li>Work around AI-operated manufacturing and delivery machines.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="row">
-              <h3>Product Process Specialist — Best Buy Canada</h3>
-              <p class="muted">Jul 2022 – Jun 2025 • Cambridge, Ontario</p>
-            </div>
-            <ul>
-              <li>Provided hands-on technical support, diagnosing hardware and software issues.</li>
-              <li>Helped customers install, configure, and optimize computers, TVs, and home tech.</li>
-              <li>Worked with Geek Squad on repairs, upgrades, and system restorations.</li>
-              <li>Used scanning tools and POS systems to process merchandise movement.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education</h2>
-
-        <div class="stack">
-          <article class="card">
-            <div class="row">
-              <h3>Bachelor of Computer Science (Honours) — Conestoga College</h3>
-              <p class="muted">In Progress (expected 2027) • Waterloo, Ontario</p>
-            </div>
-            <ul>
-              <li>Security specialization track (networks, cybersecurity, secure system design).</li>
-              <li>Relevant coursework: Software Design, Data Structures, Networks and Security, Database Systems.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="row">
-              <h3>High School Diploma — Jacob Hespeler Secondary School</h3>
-              <p class="muted">2018 – 2022 • Cambridge, Ontario</p>
-            </div>
-            <ul>
-              <li>Graduated with distinction.</li>
-              <li>Participated in Robotics.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section alt">
-      <div class="container">
-        <h2>Projects</h2>
-
-        <div class="grid">
-          <article class="card">
-            <h3>Notes-App</h3>
-            <p>Note-taking app focused on secure authentication and safer data storage.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">Security</span>
-              <span class="tag">Auth</span>
-            </div>
-            <div class="btn-row">
-              <a class="btn small" href="https://github.com/CarterBlackie/Notes-App" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Shopping-Cart</h3>
-            <p>First website assignment: a simple shopping cart experience built for learning web fundamentals.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-row">
-              <a class="btn small" href="https://github.com/CarterBlackie/Shopping-Cart" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Group12_Robot</h3>
-            <p>C++ robot project built as a team assignment.</p>
-            <div class="tags">
-              <span class="tag">C++</span>
-              <span class="tag">Team Project</span>
-            </div>
-            <div class="btn-row">
-              <a class="btn small" href="https://github.com/CarterBlackie/Group12_Robot" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Text-Processing</h3>
-            <p>CLI utility that provides interactive text and numeric processing via a menu.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">CLI</span>
-            </div>
-            <div class="btn-row">
-              <a class="btn small" href="https://github.com/CarterBlackie/Text-Processing" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>File Handling & Data Processing Functions</h3>
-            <p>Python lab: read/write/search/copy files with iteration, conditionals, and string parsing.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">File I/O</span>
-            </div>
-            <div class="btn-row">
-              <a class="btn small" href="https://github.com/CarterBlackie/File-Handling-and-Data-Processing-Functions-" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>MindTrap Game</h3>
-            <p>Client-server game work in Python, including networked levels with image transfer and math challenges.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Networking</span>
-              <span class="tag">Client/Server</span>
-            </div>
-            <div class="btn-row">
-              <a class="btn small" href="https://github.com/CarterBlackie" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-
-        <div class="grid">
-          <article class="card">
-            <h3>Programming</h3>
-            <p>Python, C, C++, C#, Java, JavaScript • OOP • data structures</p>
-          </article>
-
-          <article class="card">
-            <h3>Databases</h3>
-            <p>SQL • database design • queries • connecting apps to databases</p>
-          </article>
-
-          <article class="card">
-            <h3>Systems & Tools</h3>
-            <p>Windows, Linux • networks & security • Git/GitHub • Visual Studio • Microsoft Teams</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          Email: <a class="link" href="mailto:carterblackie55@gmail.com">carterblackie55@gmail.com</a>
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container muted small">
-        © <span id="year"></span> Carter Blackie
-      </div>
-    </footer>
-  </main>
-
-  <button id="toTop" aria-label="Back to top">↑</button>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
