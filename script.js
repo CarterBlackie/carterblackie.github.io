@@ -1,4 +1,6 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+// Year in footer
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* Sakura petals generator */
 const petalsRoot = document.getElementById("petals");
@@ -15,7 +17,7 @@ function makePetal() {
   const x = rand(0, 100).toFixed(2) + "vw";
   const drift = rand(-20, 20).toFixed(2) + "vw";
   const d = rand(9, 17).toFixed(2) + "s";
-  const delay = rand(0, 10).toFixed(2) + "s";
+  const delay = (-rand(0, 10)).toFixed(2) + "s";
   const r = rand(0, 360).toFixed(2) + "deg";
   const s = rand(0.75, 1.25).toFixed(2);
 
@@ -37,7 +39,10 @@ function makePetal() {
 
 function seedPetals() {
   if (!petalsRoot) return;
+
+  // prevents duplicates if Live Server hot reloads
   petalsRoot.innerHTML = "";
+
   for (let i = 0; i < PETAL_COUNT; i++) {
     petalsRoot.appendChild(makePetal());
   }
@@ -51,7 +56,7 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(seedPetals, 200);
 });
 
-/* Back to top */
+/* Back to top (safe even if button doesn't exist on some pages) */
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {
   if (!toTop) return;
