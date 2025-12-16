@@ -6,7 +6,7 @@
   --muted:#b3b9c7;
   --line: rgba(34, 42, 59, .9);
 
-  --pink1: rgba(255, 170, 210, .22);
+  --pink1: rgba(255, 170, 210, .16);
   --pink2: rgba(255, 130, 190, .16);
   --pink3: rgba(255, 210, 235, .10);
   --pinkStrong: rgba(255, 170, 210, .45);
@@ -251,7 +251,7 @@ h1{
     rgba(255,170,210,.16),
     transparent 45%
   );
-  opacity:0;
+  opacity:.55;
   transition:opacity .22s ease;
   pointer-events:none;
 }
@@ -260,7 +260,7 @@ h1{
   content:"";
   position:absolute;
   inset:0;
-  border-radius:18px;
+  border-radius:22px;
   padding:1px;
   background:linear-gradient(
     135deg,
@@ -273,7 +273,7 @@ h1{
     linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;
   mask-composite:exclude;
-  opacity:0;
+  opacity:.35;
   transition:opacity .22s ease;
   pointer-events:none;
 }
