@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div class="project-top"></div>
   <title>Projects | Carter Blackie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Projects by Carter Blackie — software and security-focused work." />
+  <meta name="description" content="Projects by Carter Blackie — software and security-focused work.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Sakura animated background -->
+  <!-- Loader -->
+  <div id="page-loader" aria-label="Loading">
+    <div class="loader" aria-hidden="true"></div>
+    <div class="loader-text">Loading…</div>
+  </div>
+
+  <!-- Background -->
   <div class="bg-sakura" aria-hidden="true">
     <div class="bg-glow"></div>
     <div class="petals" id="petals"></div>
@@ -21,7 +25,7 @@
     <div class="container nav-inner">
       <a class="brand" href="index.html">Home</a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Primary">
         <a href="about.html">About</a>
         <a href="experience.html">Experience</a>
         <a class="active" href="projects.html">Projects</a>
@@ -33,13 +37,16 @@
 
   <main class="section">
     <div class="container">
-      <h1>Projects</h1>
-      <p class="muted">
-        A selection of projects from my GitHub. Each one includes the stack and a link to the repo.
-      </p>
+      <header class="page-head" data-reveal>
+        <h1>Projects</h1>
+        <p class="lead muted">
+          A selection of projects from my GitHub. Each one includes the stack and a link to the repo.
+        </p>
+        <div class="divider" aria-hidden="true"></div>
+      </header>
 
       <div class="grid">
-        <article class="card">
+        <article class="card" data-reveal>
           <h3>Notes-App</h3>
           <p>Note-taking app focused on secure authentication and safer data storage.</p>
           <div class="tags">
@@ -48,11 +55,14 @@
             <span class="tag">Auth</span>
           </div>
           <div class="btn-row">
-            <a class="btn small" href="https://github.com/CarterBlackie/Notes-App" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline btn-glitch" href="https://github.com/CarterBlackie/Notes-App" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-reveal>
           <h3>Shopping-Cart</h3>
           <p>First website assignment: a simple shopping cart experience built for learning web fundamentals.</p>
           <div class="tags">
@@ -61,11 +71,14 @@
             <span class="tag">JavaScript</span>
           </div>
           <div class="btn-row">
-            <a class="btn small" href="https://github.com/CarterBlackie/Shopping-Cart" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline btn-glitch" href="https://github.com/CarterBlackie/Shopping-Cart" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-reveal>
           <h3>Group12_Robot</h3>
           <p>C++ robot project built as a team assignment.</p>
           <div class="tags">
@@ -73,11 +86,14 @@
             <span class="tag">Team Project</span>
           </div>
           <div class="btn-row">
-            <a class="btn small" href="https://github.com/CarterBlackie/Group12_Robot" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline btn-glitch" href="https://github.com/CarterBlackie/Group12_Robot" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-reveal>
           <h3>Text-Processing</h3>
           <p>CLI utility that provides interactive text and numeric processing via a menu.</p>
           <div class="tags">
@@ -85,11 +101,14 @@
             <span class="tag">CLI</span>
           </div>
           <div class="btn-row">
-            <a class="btn small" href="https://github.com/CarterBlackie/Text-Processing" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline btn-glitch" href="https://github.com/CarterBlackie/Text-Processing" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-reveal>
           <h3>File Handling & Data Processing Functions</h3>
           <p>Python lab: read/write/search/copy files with iteration, conditionals, and string parsing.</p>
           <div class="tags">
@@ -97,11 +116,14 @@
             <span class="tag">File I/O</span>
           </div>
           <div class="btn-row">
-            <a class="btn small" href="https://github.com/CarterBlackie/File-Handling-and-Data-Processing-Functions-" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline btn-glitch" href="https://github.com/CarterBlackie/File-Handling-and-Data-Processing-Functions-" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-reveal>
           <h3>MindTrap Game</h3>
           <p>Client-server game work in Python, including networked levels with image transfer and math challenges.</p>
           <div class="tags">
@@ -110,7 +132,10 @@
             <span class="tag">Client/Server</span>
           </div>
           <div class="btn-row">
-            <a class="btn small" href="https://github.com/CarterBlackie" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline btn-glitch" href="https://github.com/CarterBlackie" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
           </div>
         </article>
       </div>
@@ -118,11 +143,12 @@
   </main>
 
   <footer class="footer">
-    © <span id="year"></span> Carter Blackie
+    <div class="container muted small">
+      © <span id="year"></span> Carter Blackie
+    </div>
   </footer>
 
   <button id="toTop" aria-label="Back to top">↑</button>
-
   <script src="script.js"></script>
 </body>
 </html>
