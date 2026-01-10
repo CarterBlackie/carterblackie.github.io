@@ -3,72 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div class="project-top"></div>
   <title>About | Carter Blackie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Carter Blackie — background, strengths, and goals.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<div class="bg-sakura"><div class="bg-glow"></div><div class="petals" id="petals"></div></div>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">Home</a>
-    <nav class="nav-links">
-      <a class="active" href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="resume.html">Resume</a>
-    </nav>
+  <!-- Loader -->
+  <div id="page-loader" aria-label="Loading">
+    <div class="loader" aria-hidden="true"></div>
+    <div class="loader-text">Loading…</div>
   </div>
-</header>
 
-<main class="section">
-  <div class="container">
-    <h1>About</h1>
-    <p>
-      I’m a third-year Bachelor of Computer Science student at Conestoga College with a strong interest in software engineering and a drive to turn ideas into working solutions. I thrive on combining technical skills with real-world experience — 
-      whether it’s writing clean code or helping customers solve tech issues face-to-face.
-    </p>
-    </p>
-      Recently, I started a new role at Jefferson Elora Corporation in the Material Services department, where I’m gaining valuable hands-on experience in logistics and manufacturing operations. 
-      It’s been a great opportunity to understand how large-scale systems run behind the scenes, and how efficiency, safety, and teamwork come together to drive production forward.
-    </p>
-    </p>
-      Previously, I worked at Best Buy, where I balanced warehouse operations with customer service in the electronics department. I supported customers with product recommendations and troubleshooting, while collaborating with a team of 20+ staff 
-      and Geek Squad technicians to ensure great service.
-    </p>
-    </p>
-      In the classroom, I’m building strong foundations in Python, Java, and C#, with a growing focus on web development and object-oriented design. I’m currently seeking internship opportunities where I can apply my skills, continue learning from 
-      experienced developers, and contribute to projects that create real impact.
-    </p>
+  <!-- Background -->
+  <div class="bg-sakura" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="petals" id="petals"></div>
+  </div>
 
-    <div class="highlights">
-      <div class="highlights-card">
-        <h3>My Strengths</h3>
-        <ul>
-          <li>Security-aware development mindset</li>
-          <li>Strong problem-solving and debugging</li>
-          <li>Comfortable in Linux and Windows</li>
-          <li>Clear technical communication</li>
-        </ul>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Home</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="active" href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <header class="page-head" data-reveal>
+        <h1>About</h1>
+        <p class="lead muted">
+          A quick overview of my background, strengths, and what I’m aiming for next.
+        </p>
+        <div class="divider" aria-hidden="true"></div>
+      </header>
+
+      <div class="card" data-reveal>
+        <p>
+          I’m a third-year Bachelor of Computer Science student at Conestoga College with a strong interest in software engineering and building secure, reliable systems.
+        </p>
+
+        <p>
+          I work well in fast environments and like clear processes. I focus on clean code, solid structure, and readable UI.
+        </p>
+
+        <p style="margin-bottom:0;">
+          I’m looking for internships where I can learn from experienced developers and contribute to real products.
+        </p>
       </div>
 
-      <div class="highlights-card">
-        <h3>Looking For</h3>
-        <ul>
-          <li>Software Developer / Intern roles</li>
-          <li>Teams that value quality and learning</li>
-          <li>Projects that create real impact</li>
-        </ul>
+      <div class="highlights" data-reveal>
+        <div class="highlights-card">
+          <h3>Strengths</h3>
+          <ul>
+            <li>Security-aware mindset</li>
+            <li>Problem-solving and debugging</li>
+            <li>Comfortable in Linux and Windows</li>
+            <li>Clear communication</li>
+          </ul>
+        </div>
+
+        <div class="highlights-card">
+          <h3>Next Goals</h3>
+          <ul>
+            <li>Software developer internships</li>
+            <li>More full-stack projects</li>
+            <li>Deeper security learning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="btn-row" data-reveal>
+        <a class="btn outline btn-glitch" href="projects.html">
+          <span>View Projects</span>
+          <span class="btn-glitch-layer" aria-hidden="true"></span>
+        </a>
+
+        <a class="btn outline btn-glitch" href="resume.html">
+          <span>View Resume</span>
+          <span class="btn-glitch-layer" aria-hidden="true"></span>
+        </a>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<footer class="footer">© <span id="year"></span> Carter Blackie</footer>
-<script src="script.js"></script>
+  <footer class="footer">
+    <div class="container muted small">
+      © <span id="year"></span> Carter Blackie
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
