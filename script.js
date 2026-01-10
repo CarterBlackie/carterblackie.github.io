@@ -2,6 +2,14 @@
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+/* Page loader */
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (!loader) return;
+  loader.classList.add("hide");
+  setTimeout(() => loader.remove(), 450);
+});
+
 /* Sakura petals generator */
 const petalsRoot = document.getElementById("petals");
 const PETAL_COUNT = 28;
@@ -56,7 +64,7 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(seedPetals, 200);
 });
 
-/* Back to top (safe even if button doesn't exist on some pages) */
+/* Back to top */
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {
   if (!toTop) return;
@@ -68,3 +76,33 @@ if (toTop) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+/* Scroll reveal */
+function setupReveal() {
+  const nodes = document.querySelectorAll("[data-reveal]");
+  if (!nodes.length) return;
+
+  nodes.forEach((el) => el.classList.add("reveal"));
+
+  // If IntersectionObserver is missing, just show
+  if (!("IntersectionObserver" in window)) {
+    nodes.forEach((el) => el.classList.add("in"));
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  nodes.forEach((el) => io.observe(el));
+}
+
+setupReveal();
