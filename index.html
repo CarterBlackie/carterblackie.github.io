@@ -4,128 +4,130 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carter Blackie | Software Developer</title>
+  <meta name="description" content="Carter Blackie — Computer Science student and software developer portfolio.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-<!-- Background -->
-<div class="bg-sakura">
-  <div class="bg-glow"></div>
-  <div class="petals" id="petals"></div>
-</div>
-
-<!-- Navigation -->
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">Home</a>
-    <nav class="nav-links">
-      <a href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="resume.html">Resume</a>
-    </nav>
+  <!-- Loader -->
+  <div id="page-loader" aria-label="Loading">
+    <div class="loader" aria-hidden="true"></div>
+    <div class="loader-text">Loading…</div>
   </div>
-</header>
 
-<main>
+  <!-- Background -->
+  <div class="bg-sakura" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="petals" id="petals"></div>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Home</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
 
-      <!-- Profile Image -->
-      <div class="profile-wrap">
-        <img class="profile-pic" src="assets/profile.jpg" alt="Carter Blackie">
-      </div>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="profile-wrap" data-reveal>
+          <img class="profile-pic" src="assets/profile.jpg" alt="Carter Blackie">
+        </div>
 
-      <!-- Main Text -->
-      <div class="hero-text">
-        <h1>Carter Blackie</h1>
-        <p class="subtitle">Software Developer • Security-minded</p>
+        <div class="hero-text" data-reveal>
+          <h1>Carter Blackie</h1>
+          <p class="subtitle">Software Developer • Security-minded</p>
 
-        <p class="lead">
-          Third-year Bachelor of Computer Science (Honours) student at Conestoga College.
-          I build secure, reliable software and enjoy turning ideas into working systems.
-        </p>
+          <p class="lead">
+            Third-year Bachelor of Computer Science (Honours) student at Conestoga College.
+            I build secure, reliable software and enjoy turning ideas into working systems.
+          </p>
 
-        <div class="btn-row">
-          <a class="btn outline" href="about.html">About Me</a>
-          <a class="btn outline" href="experience.html">My Experience</a>
-          <a class="btn outline" href="skills.html">My Skills</a>
+          <div class="btn-row">
+            <a class="btn outline btn-glitch" href="about.html">
+              <span>About Me</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
+
+            <a class="btn outline btn-glitch" href="experience.html">
+              <span>My Experience</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
+
+            <a class="btn outline btn-glitch" href="skills.html">
+              <span>My Skills</span>
+              <span class="btn-glitch-layer" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-rail" data-reveal>
+          <aside class="card quick-card">
+            <h3>Quick Info</h3>
+            <ul class="quick">
+              <li><b>Location:</b> Cambridge, Ontario</li>
+              <li><b>School:</b> Conestoga College</li>
+              <li><b>Focus:</b> Software + Security</li>
+            </ul>
+          </aside>
+
+          <aside class="card quick-card">
+            <h3>Highlighted Project</h3>
+            <p class="muted" style="margin:0 0 10px;">
+              Real-time F1 telemetry visualizer with track maps and driver playback.
+            </p>
+            <ul class="quick">
+              <li><b>Stack:</b> React, TypeScript</li>
+              <li><b>Focus:</b> Data + visuals</li>
+            </ul>
+
+            <div style="margin-top:12px;">
+              <a class="btn outline btn-glitch" href="https://carterblackie.github.io/f1tracker/" target="_blank" rel="noreferrer">
+                <span>View Project</span>
+                <span class="btn-glitch-layer" aria-hidden="true"></span>
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
 
-      <!-- Right rail -->
-      <div class="hero-rail">
+      <!-- SOCIAL -->
+      <section class="social-section container" data-reveal>
+        <a class="social-card btn-glitch" href="https://github.com/carterblackie" target="_blank" rel="noopener">
+          <h3>GitHub</h3>
+          <p>View my projects and code</p>
+        </a>
 
-        <!-- Quick Info -->
-        <aside class="card quick-card">
-          <h3>Quick Info</h3>
-          <ul class="quick">
-            <li><b>Location:</b> Cambridge, Ontario</li>
-            <li><b>School:</b> Conestoga College</li>
-            <li><b>Focus:</b> Software + Security</li>
-          </ul>
-        </aside>
+        <a class="social-card btn-glitch" href="https://www.linkedin.com/in/carterblackie" target="_blank" rel="noopener">
+          <h3>LinkedIn</h3>
+          <p>Connect professionally</p>
+        </a>
 
-        <!-- Highlighted Project -->
-        <aside class="card quick-card highlight-card">
-          <h3>Highlighted Project</h3>
+        <a class="social-card btn-glitch" href="mailto:carterblackie55@gmail.com">
+          <h3>Email</h3>
+          <p>Get in touch directly</p>
+        </a>
+      </section>
+    </section>
+  </main>
 
-          <p class="muted" style="margin:0 0 10px;">
-            Real-time F1 telemetry visualizer with track maps and driver playback.
-          </p>
-
-          <ul class="quick">
-            <li><b>Stack:</b> React, TypeScript</li>
-            <li><b>Focus:</b> Data + visuals</li>
-          </ul>
-
-          <div style="margin-top:12px;">
-            <a class="btn outline" href="https://carterblackie.github.io/f1tracker/">View Project</a>
-          </div>
-        </aside>
-
-      </div>
-
+  <footer class="footer">
+    <div class="container muted small">
+      © <span id="year"></span> Carter Blackie
     </div>
-  </section>
+  </footer>
 
-  <!-- SOCIAL -->
-  <section class="social-section container">
-
-    <a class="social-card"
-       href="https://github.com/carterblackie"
-       target="_blank"
-       rel="noopener">
-      <h3>GitHub</h3>
-      <p>View my projects and code</p>
-    </a>
-
-    <a class="social-card"
-       href="https://www.linkedin.com/in/carterblackie"
-       target="_blank"
-       rel="noopener">
-      <h3>LinkedIn</h3>
-      <p>Connect professionally</p>
-    </a>
-
-    <a class="social-card"
-       href="mailto:carterblackie55@gmail.com">
-      <h3>Email</h3>
-      <p>Get in touch directly</p>
-    </a>
-
-  </section>
-
-</main>
-
-<footer class="footer">
-  © <span id="year"></span> Carter Blackie
-</footer>
-
-<script src="script.js"></script>
+  <button id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
