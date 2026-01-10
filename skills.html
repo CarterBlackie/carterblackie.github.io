@@ -3,50 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div class="project-top"></div>
   <title>Skills | Carter Blackie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Skills — programming, systems, and tools.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<div class="bg-sakura"><div class="bg-glow"></div><div class="petals" id="petals"></div></div>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">Home</a>
-    <nav class="nav-links">
-      <a href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="projects.html">Projects</a>
-      <a class="active" href="skills.html">Skills</a>
-      <a href="resume.html">Resume</a>
-    </nav>
+  <!-- Loader -->
+  <div id="page-loader" aria-label="Loading">
+    <div class="loader" aria-hidden="true"></div>
+    <div class="loader-text">Loading…</div>
   </div>
-</header>
 
-<main class="section">
-  <div class="container">
-    <h1>Skills</h1>
-
-    <article class="card">
-      <h3>Programming</h3>
-      <p>Python, C, C++, C#, Java, JavaScript</p>
-    </article>
-
-    <article class="card">
-      <h3>Systems</h3>
-      <p>Linux, Windows, networking, secure system design</p>
-    </article>
-
-    <article class="card">
-      <h3>Tools</h3>
-      <p>Git/GitHub, Visual Studio, SQL</p>
-    </article>
+  <!-- Background -->
+  <div class="bg-sakura" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="petals" id="petals"></div>
   </div>
-</main>
 
-<footer class="footer">© <span id="year"></span> Carter Blackie</footer>
-<script src="script.js"></script>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Home</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <header class="page-head" data-reveal>
+        <h1>Skills</h1>
+        <p class="lead muted">A quick snapshot of what I use and what I’m building on.</p>
+        <div class="divider" aria-hidden="true"></div>
+      </header>
+
+      <article class="card" data-reveal>
+        <h3>Programming</h3>
+        <p>Python, C, C++, C#, Java, JavaScript</p>
+      </article>
+
+      <div style="height:18px;"></div>
+
+      <article class="card" data-reveal>
+        <h3>Systems</h3>
+        <p>Linux, Windows, networking, secure system design</p>
+      </article>
+
+      <div style="height:18px;"></div>
+
+      <article class="card" data-reveal>
+        <h3>Tools</h3>
+        <p>Git/GitHub, Visual Studio, SQL</p>
+      </article>
+
+      <div class="btn-row" data-reveal>
+        <a class="btn outline btn-glitch" href="projects.html">
+          <span>View Projects</span>
+          <span class="btn-glitch-layer" aria-hidden="true"></span>
+        </a>
+
+        <a class="btn outline btn-glitch" href="resume.html">
+          <span>View Resume</span>
+          <span class="btn-glitch-layer" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container muted small">
+      © <span id="year"></span> Carter Blackie
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
